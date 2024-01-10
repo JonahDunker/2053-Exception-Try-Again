@@ -29,8 +29,7 @@ public class ExceptionTryAgain {
         arr.add(Integer.parseInt(line));
       } catch(NumberFormatException e) {
         if(line.indexOf(".") != -1) {
-          line = line.substring(0, line.indexOf("."));
-          arr.add(Integer.parseInt(line));
+          arr.add((int) Double.parseDouble(line));
           doubles++;
         } else {
           arr.add(line.length());
